@@ -1,0 +1,51 @@
+###
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+	"email":"guilherme@gmail.com",
+	"name":"Guilherme",
+	"password":"123456",
+	"role":"ADMIN"
+}
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+	"email":"guilherme@gmail.com",
+	"password":"123456"
+}
+
+
+###
+POST http://localhost:3003/band/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg3OTMzMiwiZXhwIjoxNjU2ODgyOTMyfQ.F0xepD5_eJqXaj4_hCreOrxes6KzVjL7Zg82niPN0bI
+
+{
+	"name":"Guns and Roses",
+	"music_genre":"Rock",
+	"responsible":"Axl Rose"
+}
+
+###
+GET http://localhost:3003/band/details?id=b4d4b87f-9dbb-49ff-9ee3-1c067eb1608e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg2OTIyNywiZXhwIjoxNjU2ODcyODI3fQ.J6D_KQn282608v5STf9nHa6XRQv1mcI08VeC6s799IY
+
+###
+POST http://localhost:3003/show/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg3OTMzMiwiZXhwIjoxNjU2ODgyOTMyfQ.F0xepD5_eJqXaj4_hCreOrxes6KzVjL7Zg82niPN0bI
+
+{
+	"weekDay":"SEXTA",
+	"startTime":10,
+	"endTime":11,
+	"bandId":"c58e8208-3c2f-496a-8bd0-9393f58a6e88"
+}
+
+###
+GET http://localhost:3003/show/SEXTA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg3OTMzMiwiZXhwIjoxNjU2ODgyOTMyfQ.F0xepD5_eJqXaj4_hCreOrxes6KzVjL7Zg82niPN0bI
