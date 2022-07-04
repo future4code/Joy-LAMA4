@@ -43,4 +43,15 @@ export class ShowDatabase extends BaseDatabase{
 			throw new Error(error.sqlMessage || error.message);
 		      }
 	}
+	async getShowById(id:string):Promise<Show>{
+		try {
+			const show=await this.getConnection()
+			.select("*")
+			.from(ShowDatabase.TABLE_NAME)
+			.where({id})
+			return Show.toShowModel(show[0])
+		} catch (error:any) {
+			throw new Error(error.sqlMessage || error.message);
+		      }
+	}
 }

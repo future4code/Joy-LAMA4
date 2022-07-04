@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { BandBusiness } from "../business/BandBusiness";
+import { BandBusiness } from "../business/Band/BandBusiness";
 import { BandInputDTO, GetBandInputDTO } from "../model/Band";
 
 export class BandController{

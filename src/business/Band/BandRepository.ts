@@ -1,4 +1,4 @@
-import { Band, BandInputDTO, GetBandInputDTO } from "../model/Band";
+import { Band, BandInputDTO, GetBandInputDTO } from "../../model/Band";
 
 export interface BandRepository{
 	createBand(input:BandInputDTO,token:string):Promise<void>

@@ -1,10 +1,10 @@
-import { BandDatabase } from "../data/BandDatabase";
-import { UserDatabase } from "../data/UserDatabase";
-import { BaseError } from "../error/BaseError";
-import { Band, band, BandInputDTO, GetBandInputDTO } from "../model/Band";
-import { IdGenerator } from "../services/IdGenerator";
+import { BandDatabase } from "../../data/BandDatabase";
+import { UserDatabase } from "../../data/UserDatabase";
+import { BaseError } from "../../error/BaseError";
+import { Band, band, BandInputDTO, GetBandInputDTO } from "../../model/Band";
+import { IdGenerator } from "../../services/IdGenerator";
 import { BandRepository } from "./BandRepository";
-import { Authenticator } from "../services/Authenticator";
+import { Authenticator } from "../../services/Authenticator";
 
 export class BandBusiness implements BandRepository{
 	 bandDatabase=new BandDatabase()
