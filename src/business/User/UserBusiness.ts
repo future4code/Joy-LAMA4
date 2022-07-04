@@ -1,9 +1,9 @@
-import { UserInputDTO, LoginInputDTO } from "../model/User";
-import { UserDatabase } from "../data/UserDatabase";
-import { IdGenerator } from "../services/IdGenerator";
-import { HashManager } from "../services/HashManager";
-import { Authenticator } from "../services/Authenticator";
-import { BaseError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/BaseError";
+import { UserInputDTO, LoginInputDTO } from "../../model/User";
+import { UserDatabase } from "../../data/UserDatabase";
+import { IdGenerator } from "../../services/IdGenerator";
+import { HashManager } from "../../services/HashManager";
+import { Authenticator } from "../../services/Authenticator";
+import { BaseError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../../error/BaseError";
 
 export class UserBusiness {
 

@@ -1,4 +1,4 @@
-import { ShowInputDTO, WEEK_DAY } from "../model/Show";
+import { ShowInputDTO, WEEK_DAY } from "../../model/Show";
 
 export interface ShowRepository{
 	createShow(input:ShowInputDTO,token:string):Promise<void>

@@ -49,3 +49,40 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYt
 ###
 GET http://localhost:3003/show/SEXTA
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg3OTMzMiwiZXhwIjoxNjU2ODgyOTMyfQ.F0xepD5_eJqXaj4_hCreOrxes6KzVjL7Zg82niPN0bI
+
+###
+POST http://localhost:3003/ticket/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjkwMTE2MywiZXhwIjoxNjU2OTA0NzYzfQ.KacC2DM-8xMSrIWqt6vE_zkhv01nAEcf5lCclyCh1fI
+
+{
+	"name":"Ingresso para o show do Queen",
+	"price":20.0,
+	"eventId":"dc36b092-32e1-46e7-a1e0-2fe9f21ebdd6",
+	"qtdTickets":10
+}
+
+###
+POST http://localhost:3003/gallery/addImage
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njk2NDUwNiwiZXhwIjoxNjU2OTY4MTA2fQ.8QQkQ6HdGJ06Nzld27ViXSl33TQvgpap27_SmHHfG0k
+
+{
+	"imgUrl":"https://whiplash.net/imagens_promo/queen_rir_ps.jpg",
+	"eventId":"dc36b092-32e1-46e7-a1e0-2fe9f21ebdd6"
+}
+
+
+###
+GET http://localhost:3003/gallery/dc36b092-32e1-46e7-a1e0-2fe9f21ebdd6
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njk2NDUwNiwiZXhwIjoxNjU2OTY4MTA2fQ.8QQkQ6HdGJ06Nzld27ViXSl33TQvgpap27_SmHHfG0k
+
+###
+PUT http://localhost:3003/ticket/buy
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njk2ODQ1MywiZXhwIjoxNjU2OTcyMDUzfQ.zzf0hjPJptnhjjONYyiKHW1GpypjhhspcX4O0ZzadaI
+
+{
+	"qtdTickets":2,
+	"name":"Ingresso para o show do Queen"
+}
