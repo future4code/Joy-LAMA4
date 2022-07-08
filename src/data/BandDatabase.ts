@@ -6,6 +6,8 @@ export class BandDatabase extends BaseDatabase{
 
 	public async createBand(band:band) {
 	try {
+		console.log('Database: '+band.id);
+		
 		await this.getConnection()
 		.insert({
 			id:band.id,
@@ -18,18 +20,23 @@ export class BandDatabase extends BaseDatabase{
 	      }	
 	}
 	
-	public async getBandByName(name:string) {
+	public async getBandByName(name:string):Promise<Band | []> {
 		try {
+			console.log("Get band by name: "+name);
+			
 		const result=await this.getConnection()
 		.select("*")
       		.from(BandDatabase.TABLE_NAME)
-     		 .where({ name });
-			return Band.toBandModel(result[0])
+     		 .where("name","LIKE",`%${name}%`);
+		 console.log(result);
+		 
+			return result[0]
+
 		} catch (error:any) {
 			throw new Error(error.sqlMessage || error.message);
 		      }	
 	}
-	public async getBandById(id:string) {
+	public async getBandById(id:string):Promise<Band> {
 		try {
 		const result=await this.getConnection()
 		.select("*")

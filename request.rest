@@ -22,17 +22,17 @@ Content-Type: application/json
 ###
 POST http://localhost:3003/band/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg3OTMzMiwiZXhwIjoxNjU2ODgyOTMyfQ.F0xepD5_eJqXaj4_hCreOrxes6KzVjL7Zg82niPN0bI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NzMwODE0MiwiZXhwIjoxNjU3MzExNzQyfQ.ZwLwbh6RGcetaS8QW1-jeeDjqur1wkUzwuNP5FlO_E4
 
 {
-	"name":"Guns and Roses",
+	"name":"AC/DC",
 	"music_genre":"Rock",
-	"responsible":"Axl Rose"
+	"responsible":"Angus Young"
 }
 
 ###
-GET http://localhost:3003/band/details?id=b4d4b87f-9dbb-49ff-9ee3-1c067eb1608e
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1Njg2OTIyNywiZXhwIjoxNjU2ODcyODI3fQ.J6D_KQn282608v5STf9nHa6XRQv1mcI08VeC6s799IY
+GET http://localhost:3003/band/details?name=Guns-and-Roses
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MmFjNGQyLWFmODYtNDE4Yi05ODJiLTY0MmRjZGI4YjYwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NzMyNDA4MCwiZXhwIjoxNjU3MzI3NjgwfQ.jzNhHv9yGiCkuTIVEKCN7lluQra4F3D-6P3oDpuD3Qs
 
 ###
 POST http://localhost:3003/show/create
