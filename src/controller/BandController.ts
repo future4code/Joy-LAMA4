@@ -6,7 +6,7 @@ export class BandController{
 	
 	async createBand(req:Request,res:Response) {
 		try {
-			console.log("Início controller create band");
+			
 			
 			const auth=req.headers.authorization!
 			const {name,music_genre,responsible}=req.body
@@ -17,7 +17,7 @@ export class BandController{
 			}
 			const bandBusiness=new BandBusiness()
 			await bandBusiness.createBand(input,auth)
-			console.log("Fim controller createBand");
+			
 			
 			res.status(200).send("Banda criada!")
 		} catch (error:any) {

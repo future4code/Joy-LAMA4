@@ -12,7 +12,7 @@ export class BandBusiness implements BandRepository{
 	authenticator = new Authenticator();
 	async createBand(input:BandInputDTO,token:string){
 		try {
-			console.log("Início business createBand");
+			
 			
 			if (!token) {
 				throw new BaseError(400,"Por favor, passe o token no header da requisição");
@@ -21,11 +21,10 @@ export class BandBusiness implements BandRepository{
 			if (!name || !music_genre || !responsible) {
 				throw new BaseError(400,"Por favor, passe os parâmetros name, music_genre e responsible na requisição");
 			}
-			console.log(name);
-			console.log(token);
+			
 			
 			const bandName: Band | []= await this.bandDatabase.getBandByName(name)
-			console.log(bandName);
+		
 			
 			if (bandName) {
 				throw new BaseError(400,"Nome da banda inválido. A banda com o nome informado já se encontra cadastrada.");
@@ -36,7 +35,7 @@ export class BandBusiness implements BandRepository{
 			const authData=this.authenticator.getData(token)
 			
 			const user= await userDatabase.getUserById(authData.id)
-			console.log(authData);
+			
 			
 			if(!authData){
 				throw new Error("Token inválido ou não passado")
@@ -51,19 +50,18 @@ export class BandBusiness implements BandRepository{
 			
 		
            		 const id = this.idGenerator.generate();
-	    		console.log(id);
-	    
+	    	
 			const band:band={
 				id,
 				name,
 				music_genre,
 				responsible
 			}
-			console.log(band.id);
+			
 			
 			
 			await this.bandDatabase.createBand(band)
-			console.log("Fim createBand business");
+			
 		} catch (error:any) {
 			throw new Error(error.sqlMessage || error.message);
 		}
