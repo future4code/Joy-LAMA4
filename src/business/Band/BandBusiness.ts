@@ -7,9 +7,13 @@ import { BandRepository } from "./BandRepository";
 import { Authenticator } from "../../services/Authenticator";
 
 export class BandBusiness implements BandRepository{
-	 bandDatabase=new BandDatabase()
+	bandDatabase=new BandDatabase()
+	idGenerator = new IdGenerator();
+	authenticator = new Authenticator();
 	async createBand(input:BandInputDTO,token:string){
 		try {
+			
+			
 			if (!token) {
 				throw new BaseError(400,"Por favor, passe o token no header da requisição");
 			}
@@ -17,10 +21,22 @@ export class BandBusiness implements BandRepository{
 			if (!name || !music_genre || !responsible) {
 				throw new BaseError(400,"Por favor, passe os parâmetros name, music_genre e responsible na requisição");
 			}
+			
+			
+			const bandName: Band | []= await this.bandDatabase.getBandByName(name)
+		
+			
+			if (bandName) {
+				throw new BaseError(400,"Nome da banda inválido. A banda com o nome informado já se encontra cadastrada.");
+			}
+			
 			const userDatabase=new UserDatabase()
-			const authenticator = new Authenticator();
-			const authData=authenticator.getData(token)
+			
+			const authData=this.authenticator.getData(token)
+			
 			const user= await userDatabase.getUserById(authData.id)
+			
+			
 			if(!authData){
 				throw new Error("Token inválido ou não passado")
 			     }
@@ -32,20 +48,25 @@ export class BandBusiness implements BandRepository{
 				
 			}
 			
-			const idGenerator = new IdGenerator();
-            const id = idGenerator.generate();
+		
+           		 const id = this.idGenerator.generate();
+	    	
 			const band:band={
 				id,
 				name,
 				music_genre,
 				responsible
 			}
+			
+			
+			
 			await this.bandDatabase.createBand(band)
+			
 		} catch (error:any) {
 			throw new Error(error.sqlMessage || error.message);
 		}
 	}
-	async getBand(input: GetBandInputDTO, token: string):Promise<Band> {
+	async getBand(input: GetBandInputDTO, token: string):Promise<Band | []> {
 	    try {
 		if (!token) {
 			throw new BaseError(400,"Por favor, passe o token no header da requisição");
@@ -64,8 +85,11 @@ export class BandBusiness implements BandRepository{
 				throw new BaseError(404,"Usuário não encontrado");	
 			}
 		if (name && !id) {
-			const band = await this.bandDatabase.getBandByName(name);
-		  
+			if (name.includes('_')) {
+				const newName=name.replace(/_/g," ")
+			
+			const band : Band | [] = await this.bandDatabase.getBandByName(newName);
+		
 			if (!band) {
 			  throw new Error(
 			    "Não foi possivel encontrar a banda, verifique se o nome e/ou id foram inseridos na query."
@@ -73,6 +97,21 @@ export class BandBusiness implements BandRepository{
 			}
 		  
 			return band;
+			
+		}
+		if(name.includes('-')){
+			const newName=name.replace(/-/g," ")
+			
+			const band : Band | [] = await this.bandDatabase.getBandByName(newName);
+		
+			if (!band) {
+			  throw new Error(
+			    "Não foi possivel encontrar a banda, verifique se o nome e/ou id foram inseridos na query."
+			  );
+			}
+		  
+			return band;
+		}
 		      }
 		  
 		      if (!name && id) {
