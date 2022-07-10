@@ -43,7 +43,7 @@ Este é um projeto de Back-end, desenvolvido no bootcamp da Labenu, cujo o princ
   <tr>
     <td align="center">
       <a href="https://github.com/FIXER3600">
-        <img src="https://avatars.githubusercontent.com/u/62907120?v=4" width="100px;" alt="Foto de Guilherme"/><br>
+        <img src="https://avatars.githubusercontent.com/u/47544503?v=4" width="100px;" alt="Foto de Guilherme"/><br>
         <sub>
           <b>Guilherme de Oliveira Barros</b>
         </sub>
@@ -51,7 +51,7 @@ Este é um projeto de Back-end, desenvolvido no bootcamp da Labenu, cujo o princ
     </td>
     <td align="center">
       <a href="https://github.com/mdmath15">
-        <img src="https://avatars.githubusercontent.com/u/94612208?v=4" width="100px;" alt="Foto Matheus github"/><br>
+        <img src="https://avatars.githubusercontent.com/u/86062294?v=4" width="100px;" alt="Foto Matheus github"/><br>
         <sub>
           <b>Matheus Lima Ribeiro</b>
         </sub>
