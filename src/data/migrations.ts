@@ -24,8 +24,22 @@ export class CreateTables extends BaseDatabase{
       end_time INT NOT NULL,
       band_id VARCHAR(255) NOT NULL,
       FOREIGN KEY(band_id) REFERENCES Bandas(id)
-    )
-      
+    );
+      CREATE TABLE IF NOT EXISTS Galeria_LAMA(
+	id VARCHAR(255) NOT NULL PRIMARY KEY,
+	img_url VARCHAR(255) NOT NULL,
+	event_id VARCHAR(255) NOT NULL,
+	FOREIGN KEY(event_id) REFERENCES Shows(id)
+);
+CREATE TABLE IF NOT EXISTS Ticket(
+	id VARCHAR(255) NOT NULL PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	price FLOAT NOT NULL,
+	event_id VARCHAR(255) NOT NULL,
+	qtd INT NOT NULL,
+	solds INT NOT NULL DEFAULT 0,
+	FOREIGN KEY(event_id) REFERENCES Shows(id)
+)
    `)
    .then(() => { console.log("Tabelas criadas") })
    .catch(printError)
