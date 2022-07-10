@@ -6,7 +6,7 @@ dotenv.config()
 
 export abstract class BaseDatabase {
 
-    private static connection: Knex | null = null;
+    private static connection: any
 
     protected getConnection(): Knex{
         if(!BaseDatabase.connection){

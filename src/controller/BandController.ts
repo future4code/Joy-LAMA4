@@ -1,9 +1,17 @@
 import { Request, Response } from "express";
 import { BandBusiness } from "../business/Band/BandBusiness";
+import { BandDatabase } from "../data/BandDatabase";
+import { UserDatabase } from "../data/UserDatabase";
 import { BandInputDTO, GetBandInputDTO } from "../model/Band";
+import { Authenticator } from "../services/Authenticator";
+import { IdGenerator } from "../services/IdGenerator";
+
+const bandDatabase = new BandDatabase()
+const userDatabase = new UserDatabase()
+const authenticator = new Authenticator()
+const idGenerator = new IdGenerator()
 
 export class BandController{
-	
 	async createBand(req:Request,res:Response) {
 		try {
 			
@@ -15,7 +23,7 @@ export class BandController{
 				music_genre,
 				responsible
 			}
-			const bandBusiness=new BandBusiness()
+			const bandBusiness=new BandBusiness(bandDatabase, userDatabase,authenticator, idGenerator)
 			await bandBusiness.createBand(input,auth)
 			
 			
@@ -30,7 +38,12 @@ export class BandController{
 		const input:GetBandInputDTO={name,id}
 		try {
 			const auth=req.headers.authorization!
-			const bandBusiness=new BandBusiness()
+			const bandBusiness = new BandBusiness(
+        bandDatabase,
+        userDatabase,
+        authenticator,
+        idGenerator
+      )
 			const result=await bandBusiness.getBand(input,auth)
 			res.status(200).send(result)
 		} catch (error:any) {
