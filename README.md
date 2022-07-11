@@ -27,7 +27,7 @@
 Este é um projeto de Back-end, desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : Serviços (gerador de id, autenticação e criptografia de senha), arquitetura utilizando a programação orientada a objetos e um código que possa ser testado utilizando o Jest como ferramenta.
 
 <h4 align="right"><a href="#topo">Topo</a></h4>
----
+
 
 ## <h2 id=tecnologias>🛠 Tecnologias</h2>
 
