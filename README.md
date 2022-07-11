@@ -76,7 +76,7 @@ Cada um com as seguintes caracteristicas :
 
 → Galeria_LAMA - id, img_url (url da imagem que se deseja postar) e event_id (id do evento que o a imagem fará parte).
 
-**Modelagem do Banco de Dados ** 
+**Modelagem do Banco de Dados** 
 
 ![Untitled](https://user-images.githubusercontent.com/47544503/178166945-dfd6d31e-f535-4ac8-bc5f-e938af03abe9.png)
 
