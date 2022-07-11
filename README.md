@@ -5,7 +5,6 @@
 *Labenu Musical Awards*, o **LAMA** é um festival  com várias bandas famosas para a formatura de turmas da Labenu. O sistema é responsável por gerenciar as bandas criadas, criar e vender ingressos, shows e uma galeria para cada show.
 
 
----
 ##  🔠Conteúdos
 
 <!--ts-->
@@ -20,7 +19,6 @@
 <!--te-->
 
 
----
 
 ##  <h2 id=objetivo-do-projeto>🎯Objetivo do Projeto</h2>
 
@@ -48,7 +46,7 @@ Para este projeto eu usei as seguintes tecnologias:
 - Git
 
 <h4 align="right"><a href="#topo">Topo</a></h4>
----
+
 
 ## <h2 id=funcionalidades>✔ Funcionalidades</h2>
 
@@ -85,14 +83,14 @@ Cada um com as seguintes caracteristicas :
 ![Untitled](https://user-images.githubusercontent.com/47544503/178166945-dfd6d31e-f535-4ac8-bc5f-e938af03abe9.png)
 
 <h4 align="right"><a href="#topo">Topo</a></h4>
----
+
 
 ## <h2 id=documentacao>🔗Documentação</h2>
 
 - **Documentação no Postman:** [LAMA](https://documenter.getpostman.com/view/18676403/UzJJvJ1R)
 
 <h4 align="right"><a href="#topo">Topo</a></h4>
----
+
 
 ## <h2 id=rodando-o-projeto>🛰Rodando o Projeto</h2>
 
@@ -125,7 +123,7 @@ Para Rodar o projeto, siga as seguintes etapas :
 </code>
 
 <h4 align="right"><a href="#topo">Topo</a></h4>
----
+
 
 ## <h2 id=colaboradores>Colaboradores</h2>
 
