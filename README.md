@@ -1,6 +1,6 @@
-# Labenu Music Awards 🎵
+# <h1 id="topo">Labenu Music Awards 🎵</h1>
 
-## Sobre
+## <h2 id=sobre>Sobre</h2>
 
 *Labenu Musical Awards*, o **LAMA** é um festival  com várias bandas famosas para a formatura de turmas da Labenu. O sistema é responsável por gerenciar as bandas criadas, criar e vender ingressos, shows e uma galeria para cada show.
 
@@ -11,6 +11,7 @@
 <!--ts-->
    * [Sobre](#sobre)
    * [Objetivo do Projeto](#objetivo-do-projeto)
+   * [Tecnologias](#tecnologias)
    * [Funcionalidades](#funcionalidades)
    * [Concepção do Projeto](#concepcao-do-projeto)
    * [Rodando o Projeto](#rodando-o-projeto)
@@ -21,13 +22,14 @@
 
 ---
 
-##  🎯Objetivo do Projeto
+##  <h2 id=objetivo-do-projeto>🎯Objetivo do Projeto</h2>
 
 Este é um projeto de Back-end, desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : Serviços (gerador de id, autenticação e criptografia de senha), arquitetura utilizando a programação orientada a objetos e um código que possa ser testado utilizando o Jest como ferramenta.
 
+<h4 align="right"><a href="#topo">Topo</a></h4>
 ---
 
-## 🛠 Tecnologias
+## <h2 id=tecnologias>🛠 Tecnologias</h2>
 
 Para este projeto eu usei as seguintes tecnologias:
 
@@ -47,7 +49,7 @@ Para este projeto eu usei as seguintes tecnologias:
 
 ---
 
-## ✔ Funcionalidades
+## <h2 id=funcionalidades>✔ Funcionalidades</h2>
 
 - Cadastro de Usuário
 - Login
@@ -60,7 +62,7 @@ Para este projeto eu usei as seguintes tecnologias:
 - Pegar a galeria de fotos de um evento
 
 
-## 💡Concepção do Projeto
+## <h2 id=concepcao-do-projeto>💡Concepção do Projeto</h2>
 
 
 Para esse projeto são modelados cinco entidades : **Usuarios, Bandas**, **Shows**, **Ticket** e **Galeria_LAMA**.  
@@ -82,13 +84,13 @@ Cada um com as seguintes caracteristicas :
 
 ---
 
-## 🔗Documentação
+## <h2 id=documentacao>🔗Documentação</h2>
 
 - **Documentação no Postman:** [LAMA](https://documenter.getpostman.com/view/18676403/UzJJvJ1R)
 
 ---
 
-## 🛰Rodando o Projeto
+## <h2 id=rodando-o-projeto>🛰Rodando o Projeto</h2>
 
 Para rodar o projeto, basta baixar ou clonar o repositório e rodar o comando npm i no terminal na pasta do projeto e todas as depedências serão baixadas para que o projeto possa rodar.
 
@@ -121,7 +123,7 @@ Para Rodar o projeto, siga as seguintes etapas :
 
 ---
 
-## Colaboradores
+## <h2 id=colaboradores>Colaboradores</h2>
 
 <table>
   <tr>
