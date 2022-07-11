@@ -42,6 +42,8 @@ Para este projeto eu usei as seguintes tecnologias:
 - Postman
 - Paradigma de orientação a objetos
 - Arquitetura em camadas
+- Jest
+- Git
 
 ---
 
