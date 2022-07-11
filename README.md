@@ -63,7 +63,8 @@ Para este projeto eu usei as seguintes tecnologias:
 ## 💡Concepção do Projeto
 
 
-Para esse projeto são modelados cinco entidades : **Usuarios, Bandas**, **Shows**, **Ticket** e **Galeria_LAMA**.  Cada um com as seguintes caracteristicas :
+Para esse projeto são modelados cinco entidades : **Usuarios, Bandas**, **Shows**, **Ticket** e **Galeria_LAMA**.  
+Cada um com as seguintes caracteristicas :
 
 → Usuarios -  id, name (nome), email, password (senha) e a role (responsabilidade) do usuário no sistema;
 
@@ -75,7 +76,9 @@ Para esse projeto são modelados cinco entidades : **Usuarios, Bandas**, **Shows
 
 → Galeria_LAMA - id, img_url (url da imagem que se deseja postar) e event_id (id do evento que o a imagem fará parte).
 
-- **Modelagem do Banco de Dados :** ![Untitled](https://user-images.githubusercontent.com/47544503/178166945-dfd6d31e-f535-4ac8-bc5f-e938af03abe9.png)
+**Modelagem do Banco de Dados ** 
+
+![Untitled](https://user-images.githubusercontent.com/47544503/178166945-dfd6d31e-f535-4ac8-bc5f-e938af03abe9.png)
 
 ---
 
